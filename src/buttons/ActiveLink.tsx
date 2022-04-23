@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { forwardRef, ReactNode } from "react";
 
-import { BaseButton, BaseButtonProps } from "./buttons/BaseButton";
-import { AugmentOptionalField } from "./utils/types";
+import { BaseButton, BaseButtonProps } from "./BaseButton";
+import { AugmentOptionalField } from "../utils/types";
 
 export type ActiveLinkProps = {
   children: ReactNode | ((active: boolean) => ReactNode);
@@ -16,6 +16,9 @@ export type ActiveLinkProps = {
   (active: boolean) => string
 >;
 
+/**
+ * A button that is active when the current route matches the `href` prop.
+ */
 export const ActiveLink = forwardRef<HTMLAnchorElement, ActiveLinkProps>(
   ({ children, includeQuery = false, className, ...baseButtonProps }, ref) => {
     const { pathname, asPath } = useRouter();

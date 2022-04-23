@@ -6,6 +6,9 @@ import classNames from "classnames";
 
 import { PropsWithClassName } from "./utils/types";
 
+/**
+ * Wrapper of the cropperjs library.
+ */
 export const ImageCropper = ({
   className,
   src,

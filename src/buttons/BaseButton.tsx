@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { LinkProps } from "next/link";
 import { forwardRef, ForwardedRef, ComponentPropsWithoutRef } from "react";
 
-import { NextLink, NextLinkProps } from "../NextLink";
+import { NextLink, NextLinkProps } from "./NextLink";
 import { ClickListener, PropsWithRequiredChildren } from "../utils/types";
 
 export type ButtonType = "button" | "a" | "next-link";

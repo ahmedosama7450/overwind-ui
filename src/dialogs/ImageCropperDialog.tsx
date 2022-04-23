@@ -1,12 +1,12 @@
 import Cropper from "cropperjs";
 import { useRef, useState } from "react";
 
-import { DialogReactNode } from "./dialogs/structural/BaseDialog";
-import { TypicalDialog } from "./dialogs/structural/TypicalDialog";
-import { IconButton } from "./buttons/IconButton";
-import { TypicalVerticalDivider } from "./Divider";
-import { ButtonGroup } from "./buttons/ButtonGroup";
-import { ImageCropper } from "./ImageCropper";
+import { DialogReactNode } from "./structural/BaseDialog";
+import { TypicalDialog } from "./structural/TypicalDialog";
+import { IconButton } from "../buttons/IconButton";
+import { TypicalVerticalDivider } from "../Divider";
+import { ButtonGroup } from "../buttons/ButtonGroup";
+import { ImageCropper } from "../ImageCropper";
 
 export type CropData = Omit<Cropper.Data, "rotate">;
 

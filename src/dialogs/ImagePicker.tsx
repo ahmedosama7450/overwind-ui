@@ -1,5 +1,5 @@
-import { RetypeField } from "./utils/types";
-import { FileField, FileFieldProps } from "./forms/FileField";
+import { RetypeField } from "../utils/types";
+import { FileField, FileFieldProps } from "../forms/FileField";
 import {
   ImageCropperDialog,
   ImageCropperDialogProps,
@@ -11,6 +11,9 @@ export type ImagePickerProps = RetypeField<
   FileFieldProps["children"]
 >;
 
+/**
+ * Wrapper for the ImageCropperDialog that handles receiving images from the user
+ */
 export const ImagePicker = ({ children, ...rest }: ImagePickerProps) => {
   return (
     <ImageCropperDialog {...rest}>

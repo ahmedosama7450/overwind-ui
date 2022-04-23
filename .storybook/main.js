@@ -20,6 +20,7 @@ module.exports = {
         },
       },
     },
+    "storybook-addon-next-router",
   ],
   framework: "@storybook/react",
   core: {
@@ -47,16 +48,5 @@ module.exports = {
     ];
 
     return config;
-  },
-  // TODO: This solves webpack 5 issue with storybook and typescript. See https://stackoverflow.com/a/71031198
-  typescript: {
-    check: false,
-    checkOptions: {},
-    reactDocgen: false,
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) =>
-        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
-    },
   },
 };
