@@ -1,28 +1,50 @@
 {
   "name": "overwind-ui",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "license": "MIT",
   "description": "React components on top of tailwind css and headless ui",
   "author": "ahmed osama",
-  "license": "MIT",
+  "typings": "dist/main.d.ts",
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/main.cjs.js",
+      "default": "./dist/main.esm.js"
+    },
+    "./tailwind": "./dist/tailwind.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedosama7450/overwind-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmedosama7450/overwind-ui/issues"
+  },
+  "homepage": "https://github.com/ahmedosama7450/overwind-ui#readme",
+  "keywords": [
+    "react ui library",
+    "tailwind"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "del-cli --force ./dist && rollup -c",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate-barrels": "barrelsby --config ./barrels.json --delete"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
-    "cropperjs": "^1.5.12",
-    "next": "^12.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@iconify/react": "^3.2.0",
+    "cropperjs": "^1.5.12"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@headlessui/react": "^1.5.0",
-    "@iconify/react": "^3.2.0",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
@@ -38,22 +60,35 @@
     "@types/react-dom": "18.0.1",
     "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.5",
+    "barrelsby": "^2.3.4",
+    "classnames": "^2.3.1",
+    "del-cli": "^4.0.1",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "eslint-plugin-storybook": "^0.5.10",
+    "next": "^12.1.2",
     "postcss": "^8.4.12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-hook-form": "^7.29.0",
+    "rollup": "^2.71.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
     "storybook-addon-next-router": "^3.1.1",
     "tailwindcss": "^3.0.24",
+    "tslib": "^2.4.0",
     "typescript": "4.6.3",
     "webpack": "^5.72.0"
   },
   "peerDependencies": {
     "@headlessui/react": "^1.5.0",
-    "next": "^12.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.29.0"
+    "classnames": "^2",
+    "next": "^12",
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18",
+    "react-hook-form": "^7"
   },
   "resolutions": {
     "webpack": "^5"

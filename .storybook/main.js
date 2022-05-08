@@ -2,14 +2,13 @@ const path = require("path");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  staticDirs: ["../src/assets"],
+  staticDirs: ["../assets"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     {
       /**
-       * TODO: Can I just add the addon directly without configuration ?
        * Fix Storybook issue with PostCSS@8
        * @see https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
        */
