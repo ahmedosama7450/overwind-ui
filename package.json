@@ -34,7 +34,8 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "generate-barrels": "barrelsby --config ./barrels.json --delete"
+    "generate-barrels": "barrelsby --config ./barrels.json --delete",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@iconify/react": "^3.2.0",
@@ -66,8 +67,11 @@
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "eslint-plugin-storybook": "^0.5.10",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "next": "^12.1.2",
     "postcss": "^8.4.12",
+    "prettier": "^2.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.29.0",
@@ -92,5 +96,9 @@
   },
   "resolutions": {
     "webpack": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": "eslint --cache --fix",
+    "*.{ts,js,tsx,jsx,html,css,md}": "prettier --write"
   }
 }
