@@ -31,6 +31,7 @@
   ],
   "scripts": {
     "build": "del-cli --force ./dist && rollup -c",
+    "release": "auto shipit --base-branch=main",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -103,7 +104,6 @@
     "*.{ts,js,tsx,jsx,html,css,md}": "prettier --write"
   },
   "auto": {
-    "baseBranch": "main",
     "plugins": [
       "npm"
     ]
