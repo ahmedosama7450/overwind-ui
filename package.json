@@ -34,7 +34,7 @@
     "release": "auto shipit --base-branch=main",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o docs --docs",
     "generate-barrels": "barrelsby --config ./barrels.json --delete",
     "prepare": "husky install"
   },
