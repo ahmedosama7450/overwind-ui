@@ -32,6 +32,7 @@
   "scripts": {
     "build": "del-cli --force ./dist && rollup -c",
     "release": "auto shipit --base-branch=main -vv",
+    "info": "auto info",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs --docs",
