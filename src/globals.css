@@ -1,0 +1,35 @@
+@layer base {
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: theme("colors.primary.DEFAULT");
+    cursor: pointer;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: theme("colors.primary.DEFAULT");
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .form-label {
+    @apply block w-max text-sm font-medium text-gray-700;
+  }
+
+  /* After applying this class, use before classes to style the background */
+  .pseudo-bg {
+    @apply relative isolate before:absolute before:-inset-1.5 before:z-[-10];
+  }
+
+  /* Same as pseudo-bg utility but smaller*/
+  .pseudo-bg-sm {
+    @apply relative isolate before:absolute before:-inset-1 before:z-[-10];
+  }
+}
