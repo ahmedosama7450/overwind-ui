@@ -26,7 +26,5 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
           echo "Logged into NPM as: $(npm whoami)"
-          git config --global user.name "ahmedosama7450"
-          git config --global user.email "<>"
           npm version patch
           npm publish --access=public
