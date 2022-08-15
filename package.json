@@ -1,6 +1,6 @@
 {
   "name": "overwind-ui",
-  "version": "3.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "React components on top of tailwind css and headless ui",
   "author": "ahmed osama",
