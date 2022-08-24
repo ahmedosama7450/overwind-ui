@@ -16,7 +16,7 @@ Opinionated React components built on top of
 npm install overwind-ui
 ```
 
-> `next`, `react`, `react-dom`, `react-hook-form`, `@headlessui/react`, `classnames`, are peer dependencies.
+> `next`, `react`, `react-dom`, `react-hook-form`, `@headlessui/react`, `classnames` are peer dependencies.
 
 2. Add `overwind-ui` tailwind preset and tell tailwind to compile the classes used in the library.
 
@@ -48,7 +48,7 @@ Note that you you're not allowed to change the theme elements of your config. Yo
 @import "overwind-ui/dist/styles.css";
 ```
 
-> You need to have `postcss-import` installed and configured in your project. Look [here](https://tailwindcss.com/docs/installation#3-create-your-css-file) for more info. Again, we don't import these styles ourselves because we use tailwind classes in there which you need to compile yourself to prevent duplicate classes.
+> You need to have `postcss-import` installed and configured in your project. Look [here](https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports) for more info. Again, we don't import these styles ourselves because we use tailwind classes in there which you need to compile yourself to prevent duplicate classes.
 
 4. Wrap your next.js App component with `OverwindProvider` which takes care of loading other internal styles, placing toasts, etc. Also import the newly created `index.css` (or whatever you named it) instead of `globals.css`
 
@@ -78,7 +78,7 @@ import { Button } from "overwind-ui";
 
 function Example(props) {
   return (
-    <Button type="next-link" color="secondary" roundedFull>
+    <Button type="next-link" href="hello" color="secondary" roundedFull>
       Hello World
     </Button>
   );
