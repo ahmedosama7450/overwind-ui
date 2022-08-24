@@ -49,10 +49,6 @@ module.exports = {
     },
 
     extend: {
-      fontFamily: {
-        sans: ["Open Sans", "sans-serif", ...defaultTheme.fontFamily.sans],
-      },
-
       fontSize: {
         "2xs": ["0.8125rem", "1rem"],
         md: [".9375rem", "1.375rem"],
